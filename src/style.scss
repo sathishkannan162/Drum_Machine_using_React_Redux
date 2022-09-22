@@ -1,0 +1,131 @@
+// variables
+
+$color-primary: gray;
+$color-secondary: lightgray;
+$color-border: orange;
+$color-text: black;
+$color-text-second: white;
+$bold: bold;
+$heading-font-size: 2.2rem;
+$button-font-size: 1.5rem;
+$display-font-size: 1rem;
+$min-width: 300px;
+
+* {
+  box-sizing: border-box;
+}
+
+#app-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-primary;
+  padding: 0;
+  font-weight: $bold;
+  min-width: $min-width;
+
+  #page-title {
+    font-size: $heading-font-size;
+    position: relative;
+    top: -30px;
+    text-align: center;
+  }
+  #drum-machine {
+    width: min(500px, 90%);
+    min-width: $min-width;
+    height: 400px;
+    background-color: $color-secondary;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    outline: 6px solid $color-border;
+    border-radius: 0;
+
+    .card-body {
+      min-width: $min-width;
+    }
+
+    #name-logo {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      top: -3%;
+    }
+
+    #drum-pads {
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      top: -6%;
+
+      .drum-pad {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        margin: 3px;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 8px;
+        font-weight: $bold;
+        box-shadow: 5px 5px 6px black;
+        font-size: $button-font-size;
+
+        &:active {
+          animation: press 50ms ease-out 1;
+        }
+
+        audio {
+          position: relative;
+          width: 100px;
+        }
+      }
+    }
+
+    #display {
+      background-color: $color-primary;
+      width: 200px;
+      margin: 0 auto;
+      padding: 10px 0;
+      position: relative;
+      top: -8px;
+      min-height: 45px;
+    }
+  }
+  .press-button {
+    animation: press 50ms ease-out 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .drum-pad {
+    width: 30%;
+    height: 30%;
+    border-radius: 2px;
+  }
+}
+
+@keyframes press {
+  0% {
+    background-color: $color-border;
+  }
+  50% {
+    transform: translate(2px, 2px);
+    background-color: $color-border;
+  }
+  100% {
+    background-color: $color-border;
+  }
+}
