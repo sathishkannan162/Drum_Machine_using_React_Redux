@@ -90,8 +90,8 @@
           animation: press 50ms ease-out 1;
 }
 #app-background #attribution {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -13%;
   font-size: 0.8rem;
   text-align: center;
   margin-bottom: 5px;
