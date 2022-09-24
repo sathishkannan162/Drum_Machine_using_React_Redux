@@ -123,13 +123,7 @@ $min-width: 300px;
 
 }
 
-@media (max-width: 450px) {
-  .drum-pad {
-    width: 30%;
-    height: 30%;
-    border-radius: 2px;
-  }
-}
+
 
 @keyframes press {
   0% {
@@ -142,4 +136,13 @@ $min-width: 300px;
   100% {
     background-color: $color-border;
   }
+}
+
+@media (max-width: 450px) {
+  button {
+    width: 70px !important;
+    height: 70px !important; 
+  }
+
+  
 }

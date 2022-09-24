@@ -101,13 +101,6 @@
   text-decoration: none;
 }
 
-@media (max-width: 450px) {
-  .drum-pad {
-    width: 30%;
-    height: 30%;
-    border-radius: 2px;
-  }
-}
 @-webkit-keyframes press {
   0% {
     background-color: orange;
@@ -120,6 +113,7 @@
     background-color: orange;
   }
 }
+
 @keyframes press {
   0% {
     background-color: orange;
@@ -130,5 +124,11 @@
   }
   100% {
     background-color: orange;
+  }
+}
+@media (max-width: 450px) {
+  button {
+    width: 70px !important;
+    height: 70px !important;
   }
 }/*# sourceMappingURL=style.css.map */
